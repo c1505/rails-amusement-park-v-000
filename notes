@@ -1,0 +1,54 @@
+Feature Test: User Signup
+  successfully signs up as non-admin (FAILED - 1)
+  on sign up, successfully adds a session hash (FAILED - 2)
+  successfully logs in as non-admin (FAILED - 3)
+  on log in, successfully adds a session hash (FAILED - 4)
+  successfully signs up as admin (FAILED - 5)
+  on sign up for admin, successfully adds a session hash (FAILED - 6)
+  successfully logs in as admin (FAILED - 7)
+  on log in, successfully adds a session hash to admins (FAILED - 8)
+
+Feature Test: User Signout
+  has a link to log out from the users/show page (FAILED - 9)
+  redirects to home page after logging out (FAILED - 10)
+  successfully destroys session hash when 'Log Out' is clicked (FAILED - 11)
+  has a link to log out from the users/show page when user is an admin (FAILED - 12)
+  redirects to home page after admin logs out when user is an admin (FAILED - 13)
+  successfully destroys session hash when 'Log Out' is clicked as admin (FAILED - 14)
+
+
+Attraction
+  fields
+
+  relationships
+    -has_many :rides
+    -has_many :users, through: :rides
+
+
+
+Ride
+  fields
+    (user_id: @user.id, attraction_id: @attraction.id)
+
+  relationships
+    -belongs_to :user
+    -belongs_to :attraction
+
+
+
+User
+  fields
+    :name => "Mindy",
+      :nausea => 5,
+      :happiness => 3,
+      :tickets => 4,
+      :height => 34
+      admin default false
+
+  relationships
+    -has_many :rides
+    -has_many :attractions, through: :rides
+
+  other
+    it "defaults to admin => false" do
+    probably just add the admin attribute and default to false.
