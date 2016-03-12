@@ -1,0 +1,27 @@
+<h1>Users#new</h1>
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :height %>
+  <%= f.text_field :height %><br>
+
+
+  <%= f.label :happiness %>
+  <%= f.text_field :happiness %><br>
+
+
+  <%= f.label :nausea %>
+  <%= f.text_field :nausea %><br>
+
+
+  <%= f.label :tickets %>
+  <%= f.text_field :tickets %><br>
+
+<div class="field">
+  <%= f.label :admin %><br>
+  <%= f.check_box :admin %><br>
+</div>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,14 @@
+<p>Name: <%= @user.name %></p>
+<p>Height: <%= @user.height %></p>
+<p>Happiness: <%= @user.happiness %></p>
+<p>nausea: <%= @user.nausea %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Mood <%= @user.mood %></p>
+<p>ADMIN <%= @user.admin %></p>
+
+<%= link_to "Log Out", sessions_path, method: :delete %>
+<%= link_to "See attractions", attractions_path %>
+
+
+
+

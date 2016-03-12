@@ -1,0 +1,8 @@
+
+
+<%= form_tag("/sessions", method: "post") do %>
+  <%= select_tag "user[id]",(options_from_collection_for_select(User.all, :id, :name)) %>
+  <%= submit_tag("Sign In")  %>
+<% end %>
+
+login is looking for select box "user[id]"

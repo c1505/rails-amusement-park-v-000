@@ -1,3 +1,38 @@
+attractions
+  index
+  show
+  create
+
+admin can edit, delete, or add rides from the index page
+
+userscontroller
+  new
+  create
+
+sessionscontroller
+  signup
+  signin
+  destroy
+
+has a link from the user show page to the attractions index page (FAILED - 1)
+  links from the user show page to the attractions index page (FAILED - 2)
+  prevents users from editing/deleting/adding rides on the index page (FAILED - 3)
+  has titles of the rides on the attractions index page (FAILED - 4)
+  has links on the attractions index page to the attractions' show pages (FAILED - 5)
+  links from the attractions index page to the attractions' show pages (FAILED - 6)
+  prevents users from editing/deleting a ride on the show page (FAILED - 7)
+  has a button from the attraction show page to go on the ride (FAILED - 8)
+  clicking on 'Go on ride' redirects to user show page (FAILED - 9)
+  clicking on 'Go on ride' updates the users ticket number (FAILED - 10)
+  clicking on 'Go on ride' updates the users mood (FAILED - 11)
+  when the user is tall enough and has enough tickets, clicking on 'Go on ride' displays a thank you message (FAILED - 12)
+  when the user is too short, clicking on 'Go on ride' displays a sorry message (FAILED - 13)
+  when the user doesn't have enough tickets, clicking on 'Go on ride' displays a sorry message (FAILED - 14)
+  when the user is too short and doesn't have enough tickets, clicking on 'Go on ride' displays a detailed sorry message (FAILED - 15)
+
+
+
+
 Feature Test: User Signup
   successfully signs up as non-admin (FAILED - 1)
   on sign up, successfully adds a session hash (FAILED - 2)

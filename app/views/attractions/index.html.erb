@@ -1,0 +1,23 @@
+<h1>Attractions#index</h1>
+
+
+
+<% if @user.admin? %>
+
+  <% @attractions.each do |attraction| %>
+    <p><%= attraction.name %>
+    <%= link_to "Show #{attraction.name}", attraction %></p>
+  <% end %>
+
+  <%= "ADMIN" %>
+
+  <%= link_to "New Attraction", new_attraction_path %>
+<% else %>
+
+  <% @attractions.each do |attraction| %>
+    <p><%= attraction.name %>
+    <%= link_to "Go on #{attraction.name}", attraction %></p>
+  <% end %>
+  <%= "no " %>
+<% end %>
+
